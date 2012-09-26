@@ -11,7 +11,7 @@ module RatingFor
   module ClassMethods
     def rating_for(element, options = {})
       has_one "rating_for_#{element}", 
-              :dependent => :destroy, 
+              #:dependent => :destroy, 
               :as => :element,
               :conditions => {:element_attribute => element.to_s}
       
